@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kapilsaratkarpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kapilsaratkarpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: kapilsaratkarpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: kapilsaratkarpipelinesjavascriptdocker 
+          image: ask19.azurecr.io/kapilsaratkarpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
